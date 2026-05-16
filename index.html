@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DINORIUM 导航界面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+
+        body {
+            background: url("u.png") no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .top-logo {
+            max-width: 1000px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 50px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            position: relative;
+        }
+
+        .menu-btn {
+            width: 340px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: none;
+            background: url("v.png") no-repeat center center;
+            background-size: 100% 100%;
+            border: none;
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+            -webkit-user-select: none;
+            user-select: none;
+            position: relative;
+        }
+
+        .menu-btn:hover {
+            transform: none;
+            outline: none;
+            border: none;
+        }
+        .menu-btn:hover::before {
+            content: "";
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: url("v.png") no-repeat center center;
+            background-size: 100% 100%;
+            filter: brightness(1.2);
+            z-index: 0;
+            /* 🔥 修复点击：让伪元素不挡住链接 */
+            pointer-events: none;
+        }
+
+        .hand-arrow {
+            position: absolute;
+            left: -70px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 140px;
+            height: auto;
+            display: none;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .menu-btn:hover .hand-arrow {
+            display: block;
+        }
+
+        .btn-text {
+            font-size: 22px;
+            color: #000;
+            font-weight: bold;
+            display: block;
+            background: transparent;
+            position: relative;
+            z-index: 10;
+            margin-top: -18px;
+        }
+        .btn-subtext {
+            font-size: 14px;
+            font-weight: bold;
+            color: #000000;
+            margin-top: -2px;
+            display: block;
+            background: transparent;
+            position: relative;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <img class="top-logo" src="f.png" alt="DINORIUM">
+
+    <div class="button-container">
+        <a class="menu-btn" href="https://j-jjp.github.io/dargon/index.html" target="_blank">
+            <img class="hand-arrow" src="o.png" alt="箭头">
+            <span class="btn-text">拼图练习</span>
+            <span class="btn-subtext">(Puzzle Practice)</span>
+        </a>
+
+        <a class="menu-btn" href="https://911932517.github.io/hebing-piay-game.github.io/" target="_blank">
+            <img class="hand-arrow" src="o.png" alt="箭头">
+            <span class="btn-text">选择区分</span>
+            <span class="btn-subtext">(Selection and Differentiation)</span>
+        </a>
+
+        <a class="menu-btn" href="https://j-jjp.github.io/dragon2/new_dragon4.html" target="_blank">
+            <img class="hand-arrow" src="o.png" alt="箭头">
+            <span class="btn-text">碰撞测试</span>
+            <span class="btn-subtext">(Collision Test)</span>
+        </a>
+
+        <a class="menu-btn" href="https://911932517.github.io/22.github.io/" target="_blank">
+            <img class="hand-arrow" src="o.png" alt="箭头">
+            <span class="btn-text">拓展模块</span>
+            <span class="btn-subtext">(Expansion Module)</span>
+        </a>
+    </div>
+</body>
+</html>
